@@ -12,6 +12,10 @@ class String(ValueType):
 		return ""
 
 	@classmethod
+	def dumps_value(cls, value):
+		return '"{0}"'.format(value)
+
+	@classmethod
 	def pack_value(cls, value):
 		return base128variant.pack(len(value)) + value	
 

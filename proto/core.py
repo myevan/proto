@@ -99,11 +99,11 @@ class MessageType(object):
 			for field_type in cls.field_types:
 				field_value = getattr(value, field_type.name)
 				if field_value is None:
-					yield str(None)
+					yield '' # None
 				else:
 					yield field_type.dumps_value(field_value)
 
-		return '{' + ','.join(str(data) for data in gen_dumps()) + '}'
+		return '(' + ','.join(str(data) for data in gen_dumps()) + ')'
 
 	@classmethod
 	def dumpo_value(cls, value):

@@ -59,7 +59,7 @@ packed_data = p1.pack()
 40 bytes
 
 ```
-{a,0,None,{home,None},[{999,2},{998,1}]}
+("a",0,,("home",),[("999",2),("998",1)])
 ```
 
 ### proto packed
