@@ -15,7 +15,7 @@ class Address(Message):
 
 class Person(Message):
 	name    = Required(String, 1)
-	id      = Required(Integer, 2)
+	id      = Required(Unsigned, 2)
 	email   = Optional(String, 3)
 	addr    = Required(Address, 4)
 	phones  = Repeated(PhoneNumber, 5)
@@ -27,6 +27,7 @@ Person.prepare()
 
 p1 = Person()
 p1.name = "a"
+p1.id = 150
 p1.offset = -7
 
 p1.addr = Address()

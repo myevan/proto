@@ -47,5 +47,24 @@ class Integer(ValueType):
 		ret, offset = base128variant.unpack(bytes, offset)
 		return zigzag.decode(ret), offset
 
+class Unsigned(ValueType):
+	@classmethod
+	def get_wire_type(cls):
+		return WireType.VARIANT
+
+	@classmethod
+	def new_default_value(cls):
+		return 0
+
+	@classmethod
+	def pack_value(cls, value):
+		assert(value >= 0)
+		return base128variant.pack(value)
+
+	@classmethod
+	def unpack_stream(cls, bytes, offset):
+		ret, offset = base128variant.unpack(bytes, offset)
+		return ret, offset
+
 class Enum(Integer):
 	DEFAULT_VALUE = 0

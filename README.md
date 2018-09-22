@@ -50,26 +50,26 @@ packed_data = p1.pack()
 
 ### json dumped
 
-233 bytes
+235 bytes
 
 ```python
-{"__name__": "Person", "name": "a", "id": 0, "addr": {"__name__": "Address", "main": "home"}, "phones": [{"__name__": "PhoneNumber", "number": "999", "type": 2}, {"__name__": "PhoneNumber", "number": "998", "type": 1}], "offset": -7}
+{"__name__": "Person", "name": "a", "id": 150, "addr": {"__name__": "Address", "main": "home"}, "phones": [{"__name__": "PhoneNumber", "number": "999", "type": 2}, {"__name__": "PhoneNumber", "number": "998", "type": 1}], "offset": -7}
 ```
 
 ### string dumped
 
-43 bytes
+45 bytes
 
 ```
-("a",0,,("home",),[("999",2),("998",1)],-7)
+("a",150,,("home",),[("999",2),("998",1)],-7)
 ```
 
 ### proto packed
 
-30 bytes
+31 bytes
 
 ```
-0a,01,61,10,00,22,0a,04,68,6f,6d,65,2a,02,0a,03,39,39,39,10,04,0a,03,39,39,38,10,02,30,0d
+0a,01,61,10,96,01,22,0a,04,68,6f,6d,65,2a,02,0a,03,39,39,39,10,04,0a,03,39,39,38,10,02,30,0d
 ```
 
 ## unpacking
