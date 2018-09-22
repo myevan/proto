@@ -28,7 +28,7 @@ class String(ValueType):
 
 		return value, offset
 
-class Int32(ValueType):
+class Integer(ValueType):
 	@classmethod
 	def get_wire_type(cls):
 		return WireType.VARIANT
@@ -45,5 +45,5 @@ class Int32(ValueType):
 	def unpack_stream(cls, bytes, offset):
 		return base128variant.unpack(bytes, offset)
 
-class Enum(Int32):
+class Enum(Integer):
 	DEFAULT_VALUE = 0

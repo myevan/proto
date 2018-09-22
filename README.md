@@ -18,7 +18,7 @@ class Address(Message):
 
 class Person(Message):
 	name    = Required(String, 1)
-	id      = Required(Int32,  2)
+	id      = Required(Integer, 2)
 	email   = Optional(String, 3)
 	addr    = Required(Address, 4)
 	phones  = Repeated(PhoneNumber, 5)
