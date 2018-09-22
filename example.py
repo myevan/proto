@@ -41,10 +41,11 @@ phone.number = "998"
 phone.type = PhoneType.HOME
 
 import json
-print json.dumps(p1.dumpo())
+dumpj_data = json.dumps(p1.dumpo())
+print len(dumpj_data), dumpj_data
 
-dumped_data = p1.dumps() 
-print len(dumped_data), dumped_data
+dumps_data = p1.dumps() 
+print len(dumps_data), dumps_data
 
 packed_data = p1.pack()
 print len(packed_data), ','.join('%.2x' % ord(b) for b in packed_data)
