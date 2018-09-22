@@ -30,6 +30,7 @@ class Person(Message):
 ```python
 p1 = Person()
 p1.name = "a"
+p1.id = 150
 p1.offset = -7
 
 p1.addr = Address()
