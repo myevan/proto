@@ -17,11 +17,11 @@ class Address(Message):
 	sub 	= Optional(String, 2)
 
 class Person(Message):
-	name 	= Required(String, 1)
-	id 	    = Required(Int32,  2)
-	email 	= Optional(String, 3)
+	name    = Required(String, 1)
+	id      = Required(Int32,  2)
+	email   = Optional(String, 3)
 	addr    = Required(Address, 4)
-	phones 	= Repeated(PhoneNumber, 5)
+	phones  = Repeated(PhoneNumber, 5)
 ```
 
 ## packing
