@@ -62,7 +62,7 @@ packed_data = p1.pack()
 {a,0,None,{home,None},[{999,2},{998,1}]}
 ```
 
-## proto packed
+### proto packed
 
 28 bytes
 
@@ -70,7 +70,7 @@ packed_data = p1.pack()
 0a,01,61,10,00,22,0a,04,68,6f,6d,65,2a,02,0a,03,39,39,39,10,02,0a,03,39,39,38,10,01
 ```
 
-## unpacking
+### unpacking
 
 ```python
 p2 = Person()
