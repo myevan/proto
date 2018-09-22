@@ -1,4 +1,5 @@
 import base128variant
+import zigzag
 
 from core import WireType, ValueType
 
@@ -39,11 +40,12 @@ class Integer(ValueType):
 
 	@classmethod
 	def pack_value(cls, value):
-		return base128variant.pack(value)
+		return base128variant.pack(zigzag.encode(value))
 
 	@classmethod
 	def unpack_stream(cls, bytes, offset):
-		return base128variant.unpack(bytes, offset)
+		ret, offset = base128variant.unpack(bytes, offset)
+		return zigzag.decode(ret), offset
 
 class Enum(Integer):
 	DEFAULT_VALUE = 0

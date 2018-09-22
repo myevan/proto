@@ -15,6 +15,8 @@ PACK_FORMATS = [
 ]
 
 def gen_encoded_values(value):
+    assert(value >= 0)
+
     remain = value & 0x7f
     value >>= 7
 
