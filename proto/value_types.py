@@ -67,4 +67,4 @@ class Unsigned(ValueType):
 		return ret, offset
 
 class Enum(Integer):
-	DEFAULT_VALUE = 0
+	pass
