@@ -44,9 +44,8 @@ print json.dumps(p1.dumpo())
 dumped_data = p1.dumps() 
 print len(dumped_data), dumped_data
 
-from textwrap import wrap
 packed_data = p1.pack()
-print len(packed_data), wrap(packed_data.encode('hex'), 2)
+print len(packed_data), ','.join('%.2x' % ord(b) for b in packed_data)
 
 p2 = Person()
 p2.unpack(packed_data, 0)
